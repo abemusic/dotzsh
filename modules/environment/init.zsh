@@ -20,7 +20,7 @@ unsetopt MAIL_WARNING     # Don't print a warning message if a mail file has bee
 if [[ "$OSTYPE" = solaris* ]]; then
   export HOSTNAME=`hostname`
 else
-  export HOSTNAME=`hostname -f`
+  export HOSTNAME=$HOST
 fi
 export HOST=`echo $HOSTNAME | cut -f1 -d.`
 if [[ "$HOSTNAME" = *\.*  ]]; then
